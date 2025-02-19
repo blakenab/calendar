@@ -214,7 +214,7 @@ class CalendarsApp:
                             print("Invalid date format. Use YYYY-MM-DD HH:MM.")
                             continue
                         event = Event(title, start_time, end_time)
-                        calendar.add_event(event)  # FIXED: Ensures event is added to the selected calendar
+                        calendar.add_event(event)  
                     else:
                         print("Calendar not found.")
                 elif command == "view_calendar":
@@ -260,7 +260,7 @@ class CalendarsApp:
                     
                     if calendar:
                         event_title = input("Enter event title to delete: ").strip()
-                        calendar.remove_event(event_title)  # Calls the fixed method in the Calendar class
+                        calendar.remove_event(event_title)  
                     else:
                         print("Error: Calendar not found.")
 
