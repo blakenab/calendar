@@ -234,7 +234,7 @@ class CalendarsApp:
                     calendar = next((c for c in self.current_user.calendars if c.name == calendar_name), None)
                     if calendar:
                         event_title = input("Enter event title to update: ").strip()
-                        calendar.update_event(event_title)  # Calls the method from Calendar class
+                        calendar.update_event(event_title)  
                     else:
                         print("Calendar not found.")
                 elif command == "share_calendar":
