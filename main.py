@@ -60,6 +60,11 @@ class Calendar:
             self.shared_with.append(user)
             print(f"Calendar '{self.name}' shared with {user.username}.")
 
+            user.calendars.append(self)  # Add the calendar reference to the shared user's list
+            for event in self.events:
+                event.share_event(user)  # Make sure each event is also shared
+
+
     
     def toggle_public_private(self):
         self.is_public = not self.is_public
